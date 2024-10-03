@@ -1,5 +1,5 @@
 section .data
-    msg db "abc, World", 0
+    msg db "ABC, World", 0
     
     array dd 10, 20, 30, 40  
 
@@ -11,10 +11,10 @@ _start:
     mov eax, 10       ; Move immediate value 10 into EAX
 
     ; Direct
-    mov ebx, [eax]
+    ; mov ebx, [eax]
 
     ; Register Addressing
-    mov ebx, eax
+    ; mov ebx, eax
 
     ; Indirect Addressing
     mov ebx, msg             

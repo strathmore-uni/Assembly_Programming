@@ -1,7 +1,12 @@
 section .data
-    start_message db "Start"       ; Define "Start" message
-    hello_message db "Hello from function"; Define "Hello" message
-    goodbye_message db "Goodbye"  ; Define "Goodbye" message
+    start_message db "Start", 0xA, 0     ; Define "Start" message
+    start_len equ $ - start_message ; 5, 6 with new line
+    
+    hello_message db "Hello from function", 0xA, 0 ;Define "Hello" message
+    hello_message_len equ $ - hello_message ; 19 / 20 with new line
+
+    goodbye_message db "Goodbye", 0xA, 0  ; Define "Goodbye" message
+    goodbye_message_len equ $ - goodbye_message ; 7 or 8 with new line
 
 section .bss
 
@@ -13,7 +18,7 @@ _start:
     mov eax, 4              
     mov ebx, 1              
     mov ecx, start_message  
-    mov edx, 5          
+    mov edx, start_len          
     int 0x80                
 
     ; Call the function to print "Hello"
@@ -27,7 +32,7 @@ print_hello:
     mov eax, 4              
     mov ebx, 1              
     mov ecx, hello_message  
-    mov edx, 20            
+    mov edx, hello_message_len            
     int 0x80                
 
     ; Return to the caller
@@ -38,9 +43,12 @@ goodbye:
     mov eax, 4              
     mov ebx, 1              
     mov ecx, goodbye_message 
-    mov edx, 8              
-    int 0x80                
+    mov edx, goodbye_message_len             
+    int 0x80
 
+    ; call exit_section                
+
+; exit_section:
     ; Exit the program
     mov eax, 1              
     xor ebx, ebx            
