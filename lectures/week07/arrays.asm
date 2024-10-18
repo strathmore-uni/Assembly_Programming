@@ -12,7 +12,6 @@ _start:
 
     mov byte [array + 2], 50      
 
-    ; Exit
-    mov eax, 60               
-    xor edi, edi              
-    syscall
+    mov rax, 60        
+    xor rdi, rdi       
+    syscalll

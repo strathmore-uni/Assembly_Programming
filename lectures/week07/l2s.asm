@@ -9,14 +9,12 @@ section .text
 _start:
    
     mov eax, dword [my_value]     
-
     
     mov bx, ax                    
 
-    
     mov cl, al                    
 
     
-    mov eax, 60                  
-    xor edi, edi                 
+    mov rax, 60        
+    xor rdi, rdi       
     syscall

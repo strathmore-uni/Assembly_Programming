@@ -32,6 +32,6 @@ _start:
     mov rax, [rbx + rsi*8] 
 
     ; Exit the program
-    mov rax, 60        ; Exit system call
-    xor rdi, rdi       ; Exit code 0
+    mov rax, 60        
+    xor rdi, rdi       
     syscall
