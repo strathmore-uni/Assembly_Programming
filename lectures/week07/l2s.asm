@@ -1,8 +1,6 @@
 section .data
     my_value: dq 0x123456789ABCDEF0 
 
-section .bss
-
 section .text
     global _start
 

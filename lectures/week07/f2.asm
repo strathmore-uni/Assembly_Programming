@@ -1,12 +1,12 @@
+; 
 section .data
-    number dd 12345678         
+    number dd 12345678       
 
 section .text
     global _start
 
 _start:
 
-   
     mov ebx, number             
 
     mov al, [ebx]               
