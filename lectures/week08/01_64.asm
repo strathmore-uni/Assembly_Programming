@@ -8,7 +8,7 @@ section .bss
 section .text
     global _start
 
-; Length of the message (without null terminator)
+; Length of the message 
 ; msg_len EQU 14  
 ; msg_len EQU $ - msg
 

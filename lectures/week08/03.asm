@@ -1,5 +1,5 @@
 section .data
-    newline db 10  ; Newline character
+    newline db 10  ; Newline
 
 section .text
 global _start

@@ -4,7 +4,7 @@ section .bss
 section .text
 global _start
 
-    ; Define a variable-sized buffer using %assign
+   
 %assign BUFFER_SIZE 10
 
 _start:
