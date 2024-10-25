@@ -1,3 +1,4 @@
+; run as 64
 section .data
     newline db 10  ; Newline
 
