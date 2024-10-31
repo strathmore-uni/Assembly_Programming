@@ -2,7 +2,7 @@ section .bss
     buffer resb 10
 
 section .text
-global _start
+    global _start
 
 %assign BUFFER_SIZE 10
 
@@ -13,8 +13,6 @@ _start:
     lea rsi, [buffer]       ; pointer to buffer
     mov edx, BUFFER_SIZE    ; number of bytes to read
     syscall
-
-    
 
     ; Exit the program
     mov eax, 60         

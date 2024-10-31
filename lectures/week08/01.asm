@@ -1,11 +1,12 @@
 section .data
     msg db "Hello, World!", 10, 0
+    ; msg_len EQU $ - msg
 
 section .bss
     buffer resb 64  ; Reserve 64 bytes for buffer
 
 section .text
-global _start
+    global _start
 
 msg_len EQU 14  ; Length of the message
 

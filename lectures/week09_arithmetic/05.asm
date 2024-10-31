@@ -8,5 +8,5 @@ _start:
 
     ; Exit program
     mov eax, 1            
-    xor ebx, ebx          
+    xor ebx, ebx        
     int 0x80
