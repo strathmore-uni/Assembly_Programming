@@ -16,7 +16,7 @@ _start:
 
     mov al, 0b00001111        ; Load binary value into eax ---- 15
     not al                    ; Perform bitwise NOT (invert all bits in eax)
-    ; Result: eax = 0b11110000 (in binary form) ---- 240
+                             ; Result: eax = 0b11110000 (in binary form) ---- 240
 
     ; Exit program
     mov eax, 60                ; syscall number for exit
