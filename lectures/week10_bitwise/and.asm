@@ -8,6 +8,6 @@ _start:
                                 ; Result: eax = 0b10001000 -----136
 
     ; Exit program
-    mov eax, 60                ; syscall number for exit
-    xor edi, edi               ; status 0
-    syscall
+    mov eax, 1                ; syscall number for exit
+    xor ebx, ebx               ; status 0
+    int 0x80

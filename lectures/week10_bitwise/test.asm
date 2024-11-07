@@ -12,6 +12,6 @@ _start:
 
 bit_not_set:
     ; Code here if bit is not set
-    mov eax, 60                ; syscall number for exit
-    xor edi, edi               ; status 0
-    syscall
+    mov eax, 1                
+    xor ebx, ebx               
+    int 0x80
