@@ -6,18 +6,15 @@ section .bss
 
 section .text
 
-
 open_file:
     
     OPEN_FILE rdi, rsi, rdx
     ret
 
-
 read_file:
     
     READ_FILE rdi, rsi, rdx
     ret
-
 
 write_file:
 

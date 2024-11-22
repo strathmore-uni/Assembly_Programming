@@ -1,6 +1,6 @@
 section .data
     num1 dq 20                      
-    num2 dq 20                      
+    num2 dq 200                      
 
     msg_a_greater db "A > B", 0xA   
     len_a_greater equ $ - msg_a_greater

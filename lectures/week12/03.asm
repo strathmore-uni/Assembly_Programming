@@ -1,6 +1,6 @@
 section .data
     newline db 0xA
-
+    
 section .text
     global _start
 
@@ -10,7 +10,7 @@ _start:
         mov rdi, 1                   
         mov rsi, newline             
         mov rdx, 1                   
-        mov rcx, 50                  
+        mov rcx, 5                 
     .clear:
         syscall
         loop .clear
