@@ -5,7 +5,7 @@ section .text
     global _start
 
 _start:
-    
+
     %macro DISPLAY_MSG 1             
         mov rax, 1                   
         mov rdi, 1                   
@@ -14,7 +14,6 @@ _start:
         syscall                      
     %endmacro
 
-    
     DISPLAY_MSG msg
 
     ; Exit program

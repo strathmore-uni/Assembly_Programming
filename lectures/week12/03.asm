@@ -5,7 +5,6 @@ section .text
     global _start
 
 _start:
-    
     %macro CLEAR_SCREEN 0
         mov rax, 1                   
         mov rdi, 1                   

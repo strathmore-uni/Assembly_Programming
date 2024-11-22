@@ -1,25 +1,24 @@
 section .data
-    num1 dd 5
-    num2 dd 10
-    result dd 0
+    num1 dq 5
+    num2 dq 6
+    result dq 0
 
 section .text
     global _start
 
 _start:
     
-    %macro ADD_TWO_NUMS 2
-        mov eax, [%1]                
-        add eax, [%2]                
+    %macro MULTIPLY_NUMS 2
+        mov rax, [%1]                
+        mov rbx, [%2]                
+        mul rbx                      
     %endmacro
 
-    
-    ADD_TWO_NUMS num1, num2
+    MULTIPLY_NUMS num1, num2
 
-    ; Store the result
-    mov [result], eax
+    mov [result], rax
 
     ; Exit program
-    mov eax, 1                       
-    xor ebx, ebx                     
-    int 0x80
+    mov rax, 60                      
+    xor rdi, rdi                     
+    syscall
